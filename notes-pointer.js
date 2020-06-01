@@ -143,7 +143,6 @@ var RevealNotes = (function() {
             }
 
             notesPopup.postMessage( JSON.stringify( messageData ), '*' );
-
         }
 
 
@@ -280,6 +279,10 @@ var RevealNotes = (function() {
 
         addKeyBinding(pointer_options.key, pointer_options.keyCode, 'A',
                       'Toggle pointer', togglePointer);
+
+        if( pointer_options.enabled ) {
+          pointerOn();
+        }
 
         return {point: point, togglePointer: togglePointer};
     })();
